@@ -108,6 +108,12 @@ class HDFCApi {
 			'https://mobilebanking.hdfcbank.com/meap/apps/services/api/meap/mobilewebapp/query'
 		);
 	}
+	
+	async login() {
+		await this.page.click('#logoutbutton a'); // Login
+		await this.page.close();
+	}
+}
 
 	async logout() {
 		await this.page.click('#logoutbutton a'); // Logout
